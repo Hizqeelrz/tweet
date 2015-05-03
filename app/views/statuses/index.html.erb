@@ -1,1 +1,11 @@
 <h1>Status#index</h1>
+
+<%= form_for @status do |f| %>
+	<%= f.text_field :body, placeholder: "Write something..." %>
+	<%= f.submit "Post" %>
+<% end -%>
+
+<% @statuses.each do |status| %>
+	<%= status.body %> <br>
+<% end -%>
+

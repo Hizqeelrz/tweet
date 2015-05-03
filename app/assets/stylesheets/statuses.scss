@@ -1,3 +1,17 @@
 // Place all the styles related to the statuses controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.success{
+	background-color: green;
+	color: #fff;
+	max-width: 300px;
+	padding: 20px;
+	opacity: 0.5;
+}
+.error{
+	background-color: red;
+	color: #fff;
+	max-width: 300px;
+	padding: 20px;
+	opacity: 0.5;
+}

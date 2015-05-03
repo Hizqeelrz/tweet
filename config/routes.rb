@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-
+  resources :profiles
   resources :statuses
 
   devise_for :users

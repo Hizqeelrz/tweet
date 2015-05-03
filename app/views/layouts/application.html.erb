@@ -7,7 +7,29 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<nav>
+	<ul>
+		<% if user_signed_in? %>
+		<li>
+			<%= current_user.email %>
+		</li>
+		<li>
+				<%= link_to "Logout", destroy_user_session_path, method: :delete %>
+		</li>
+		<% end -%>
+	</ul>
+</nav>
 
+
+<% if flash[:success] %>
+	<div class="success">
+		<%= flash[:success] %>
+	</div>
+<% elsif flash[:error] %>
+	<div class="error">
+		<%= flash[:error] %>
+	</div>
+<% end -%>
 <%= yield %>
 
 </body>
